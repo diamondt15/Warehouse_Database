@@ -1,2 +1,14 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+**This project was completed as a part of Google Data Analytics Course.**
+
+# Pull data from the database and limit it to the first 100 variables
+select *
+from warehouse_orders.warehouse
+limit 100
+
+# Select two tables to combine them and create a new name for the new table
+
+select orders.*,
+warehouse.warehouse_alias,
+warehouse.state
+from warehouse_orders.orders orders
+join warehouse_orders. warehouse warehouse on orders.warehouse_id = warehouse.warehouse_id
